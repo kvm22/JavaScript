@@ -5,7 +5,7 @@ console.log(2 < 1);
 console.log(2 == 1);
 console.log(2 != 1);
 
-// Here it is liitle tricky cause of diffrent working of == and >=,<= and here we ARE comparing different datatypes like in first one string and number so sometimes it dosn't give predicatable result as null first converted into 0 then it  check it therefore so.
+// Here it is liitle tricky cause of diffrent working of == and >=,<= and here we ARE comparing different datatypes like in first one string and number so sometimes it dosn't give predicatable result as null first converted into 0 or NaN then it  check it therefore so.
 
 console.log("2" > 1);
 console.log("02" > 1);
