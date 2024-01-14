@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
+
+
+//JavaScript Code:
+
+You're defining a class called React with a constructor.
+Inside the constructor, you set two properties (library and server) for the instance of the class.
+You also have an event listener attached to the button using addEventListener.
+The event listener is set to call the handleClick method when the button is clicked. It uses .bind(this) to ensure that the this context inside handleClick refers to the current instance of the React class.
+
+//In simpler terms, bind(this) is used to fix the value of this for the handleClick method so that it always points to the current instance of the React class, regardless of how it is called. This is a common practice in JavaScript to ensure that the correct context is maintained when functions are used as callbacks or event handlers.
